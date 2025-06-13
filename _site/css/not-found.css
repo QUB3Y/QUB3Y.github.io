@@ -1,0 +1,68 @@
+body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background-color: #0F111A;
+      color: #F4F4F4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    .logo {
+      font-family: 'Gwendolyn', cursive;
+      font-size: 2.5rem;
+      color: #FFB3EC;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3rem;
+      color: #FFB3EC;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-family: 'Lora', serif;
+      color: #B0B3C1;
+      font-size: 1.1rem;
+      max-width: 30rem;
+      margin: 0 auto 2rem auto;
+    }
+
+    .button {
+      background-color: #94B3FD;
+      color: #0F111A;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(148, 179, 253, 0.3);
+    }
+
+    .button:hover {
+      background-color: #FF9AE4;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(255, 154, 228, 0.4);
+    }
