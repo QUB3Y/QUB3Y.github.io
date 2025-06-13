@@ -1,0 +1,21 @@
+body {
+    font-size: 100%;
+}
+
+body {
+    background-color: #0F111A;
+    background-image: radial-gradient(circle at top right, #1B1D29 0%, #0F111A 100%);
+}
+
+.container {
+    margin: 1.9rem auto;
+}
+
+#main-nav.hidden {
+  display: none;
+}
+#main-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 | Lost in Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Gwendolyn:wght@700&family=Lora&display=swap" rel="stylesheet">
+  <link href="/css/not-found.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+</head>
+<body>
+  <canvas id="star-canvas"></canvas>
+  <div class="container">
+    <div class="logo">Qubey</div>
+    <h1>404: Lost in the Stars</h1>
+    <p>Oh no! This page drifted away.</p>
+    <button class="button" onclick="window.location.href='/'">Return Home</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('star-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let stars = [];
+    let w, h;
+
+    function initStars() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+
+      stars = [];
+      for (let i = 0; i < 120; i++) {
+        stars.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.5,
+          alpha: Math.random(),
+          dAlpha: 0.005 + Math.random() * 0.01
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, w, h);
+      for (const star of stars) {
+        star.alpha += star.dAlpha;
+        if (star.alpha <= 0 || star.alpha >= 1) star.dAlpha *= -1;
+
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        ctx.fill();
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener('resize', initStars);
+    initStars();
+    animateStars();
+  </script>
+</body>
+</html>
