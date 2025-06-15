@@ -9,10 +9,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Gwendolyn:wght@700&family=Lora&display=swap"
         rel="stylesheet">
+    <link href="/css/material-icons.css" rel="stylesheet">
     <title>{{ page.title }}</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="/js/main.js"></script>
 </head>
 
 <body class="container">
@@ -23,13 +25,17 @@
         <div>
             <h1>Qubey</h1>
         </div>
-        <div>
-            <nav id="main-nav" class="myLinks">
+        <div class="dropdown">
+            <button onclick="showNav()" class="dropbtn">Dropdown</button>
+            <nav id="main-nav" class="dropdown-content">
                 <a href="about.html">About Me</a>
                 <a href="projects.html">Projects</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
             </nav>
+            <!-- <a href="javascript:void(0);" class="nav-icon" onclick="mobileNav()">
+                <span class="material-icons-round mi-menu"></span>
+            </a> -->
         </div>
     </header>
 
