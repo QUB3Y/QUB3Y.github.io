@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    margin: 1.9rem auto;
+    margin: 0 auto;
+    width: 100%;
 }
 
 #main-nav.hidden {
@@ -18,4 +19,22 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+header h1 {
+  color: #FFB3EC;
+  font-family: "Gwendolyn", cursive;
+  font-weight: bold;
+  font-size: 2.25rem;
+  margin-top: -0.5rem;
+  
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(34, 36, 45, 0.75);
+  padding: 0.313rem 0.938rem;
+  border-radius: 0px 0px 16px 16px;
 }
