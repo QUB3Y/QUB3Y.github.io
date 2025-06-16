@@ -77,3 +77,27 @@ header {
 .show {display:block;}
 
 /* #endregion */
+
+/* #region page-index */
+
+#badge-image {
+  border-radius: 16px;
+}
+
+.page-index {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.page-index h2 {
+  color:#FFB3EC;
+  width: 22.25rem;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+/* #endregion */
+
