@@ -9,31 +9,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Gwendolyn:wght@700&family=Lora&display=swap"
         rel="stylesheet">
-    <link href="/css/material-icons.css" rel="stylesheet">
+    <link href="/assets/css/material-icons.css" rel="stylesheet">
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="/js/main.js"></script>
-    
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/main.js"></script>
+    {% feed_meta %}
+    {% seo %}
 </head>
 
 <body class="container">
     <header>
         <div>
-            <a href="index.html"><img src="/img/favicon.png" alt="site logo" width="35" height="35"></a>
+            <a href="/"><img src="/assets/img/favicon.png" alt="site logo" width="35" height="35"></a>
         </div>
         <div>
             <h1>Qubey</h1>
         </div>
         <div class="dropdown">
-            <button onclick="showNav()" class="dropbtn">Dropdown</button>
-            <nav id="main-nav" class="dropdown-content">
-                <a href="about.html">About Me</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <button onclick="showNav()" class="dropbtn">menu</i></button>
+            {% include navigation.html %}
             <!-- <a href="javascript:void(0);" class="nav-icon" onclick="mobileNav()">
                 <span class="material-icons-round mi-menu"></span>
             </a> -->
