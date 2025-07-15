@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/authors/quinn.html</loc>
-<lastmod>2025-06-16T21:50:55-06:00</lastmod>
+<loc>http://localhost:4000/authors/quinn.html</loc>
+<lastmod>2025-07-15T12:38:35-06:00</lastmod>
 </url>
 <url>
-<loc>/2025/06/16/Insulin-pump.html</loc>
-<lastmod>2025-06-16T00:00:00-06:00</lastmod>
+<loc>http://localhost:4000/about.html</loc>
 </url>
 <url>
-<loc>/about.html</loc>
+<loc>http://localhost:4000/blog.html</loc>
 </url>
 <url>
-<loc>/blog.html</loc>
+<loc>http://localhost:4000/contact.html</loc>
 </url>
 <url>
-<loc>/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>/staff.html</loc>
+<loc>http://localhost:4000/staff.html</loc>
 </url>
 </urlset>

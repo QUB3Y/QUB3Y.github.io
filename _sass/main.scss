@@ -5,11 +5,11 @@ body {
 body {
     background-color: #0F111A;
     background-image: radial-gradient(circle at top right, #1B1D29 0%, #0F111A 100%);
+    background-repeat: no-repeat;
 }
 
 .container {
-    margin: 0 auto;
-    width: 100%;
+  margin: 0 auto;
 }
 
 #main-nav.hidden {
@@ -80,18 +80,25 @@ header {
 
 /* #region page-index */
 
-#badge-image {
-  border-radius: 16px;
+
+main.page-index {
+  display: block;
+  margin: 0 10%;
 }
 
 .page-index {
-  margin: 0 auto;
-  width: 50%;
+  margin-top: 1.2rem;
+}
+
+#badge-image {
+  width: 65%;
+  padding: 0 17.5%;
 }
 
 .page-index h2 {
-  color:#FFB3EC;
-  width: 22.25rem;
+  color: #FFB3EC;
+  // width: 85%;
+  padding: 0 7%;
   font-family: "Cinzel Decorative", serif;
   font-size: 1.375rem;
   font-weight: bold;
@@ -99,5 +106,24 @@ header {
   text-align: center;
 }
 
+
 /* #endregion */
 
+.page-contact button {
+        background-color: #94B3FD;
+      color: #0F111A;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(148, 179, 253, 0.3);
+}
+
+.page-contact button:hover {
+        background-color: #FF9AE4;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(255, 154, 228, 0.4);
+}

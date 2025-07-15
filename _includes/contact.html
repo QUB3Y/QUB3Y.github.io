@@ -1,0 +1,5 @@
+<div class="contact-links">
+    {% for item in site.data.contact %}
+        <button class="button" onclick="window.location.href='{{ item.link }}'">{{ item.name }}</button>
+    {% endfor %}
+</div>
