@@ -61,7 +61,8 @@ main.page-index {
   margin: 0 10%; }
 
 .page-index {
-  margin-top: 1.2rem; }
+  margin-top: 1.2rem;
+  background: none; }
 
 #badge-image {
   width: 65%;

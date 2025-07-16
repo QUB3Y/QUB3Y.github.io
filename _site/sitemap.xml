@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/authors/quinn.html</loc>
-<lastmod>2025-07-15T12:38:35-06:00</lastmod>
+<loc>/authors/quinn.html</loc>
+<lastmod>2025-07-15T13:55:54-06:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about.html</loc>
+<loc>/about.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog.html</loc>
+<loc>/blog.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/contact.html</loc>
+<loc>/contact.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/staff.html</loc>
+<loc>/staff.html</loc>
 </url>
 </urlset>
