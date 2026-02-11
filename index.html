@@ -1,10 +1,193 @@
----
-title: Qubey | Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Gwendolyn:wght@700&family=Lora&display=swap" rel="stylesheet">
+  <link href="/assets/css/not-found.css" rel="stylesheet" type="text/css" media="all">
+  <title>Under Construction</title>
 
-<main class="page-index">
-    <Section>
-        <img src="/assets/img/qubey-badge.png" alt="Qubey Fursona Badge" id="badge-image">
-        <h2>Synths, Stars, and Stitches.</h2>
-    </Section>
-</main>
+  <style>
+    :root {
+      --bg: #07080d;
+      --bg-accent: #0e1022;
+      --fg: #f2eaff;
+      --muted: #b8b3d6;
+      --pink: #ff7ac8;
+      --violet: #8b7bff;
+      --cyan: #6ee7ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(1px 1px at 20% 30%, var(--fg) 1px, transparent 0),
+        radial-gradient(1px 1px at 70% 60%, var(--fg) 1px, transparent 0),
+        radial-gradient(1px 1px at 40% 80%, var(--fg) 1px, transparent 0),
+        radial-gradient(1px 1px at 85% 25%, var(--fg) 1px, transparent 0),
+        radial-gradient(circle at top, var(--bg-accent), var(--bg));
+      background-size: 100px 100px, 120px 120px, 140px 140px, 160px 160px, cover;
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Ubuntu, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      padding: 3rem 2.5rem;
+      max-width: 640px;
+      backdrop-filter: blur(12px);
+      background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+      );
+      border-radius: 18px;
+      box-shadow:
+        0 0 40px rgba(139,123,255,0.15),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    /* subtle glitch shimmer */
+    h1::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      color: var(--pink);
+      opacity: 0.15;
+      animation: glitch 4s infinite steps(1);
+      pointer-events: none;
+    }
+
+    @keyframes glitch {
+      0%, 92%, 100% { transform: translate(0); }
+      93% { transform: translate(-2px, 1px); }
+      94% { transform: translate(2px, -1px); }
+      95% { transform: translate(-1px, 2px); }
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--cyan), var(--pink));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .sigil {
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: var(--violet);
+      opacity: 0.7;
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <canvas id="star-canvas"></canvas>
+  <div class="stars"></div>
+
+  <main class="container">
+    <h1 data-text="Under Construction">Under Construction</h1>
+
+    <p>
+      This space is currently being rebuilt.<br />
+      New content will be made avaliable soon.
+    </p>
+
+    <p>
+      You can still <a href="/contact.html">reach out</a> if you need to.
+    </p>
+
+    <div class="sigil">
+      ✦ SIGNAL LOST · RETURNING SOON ✦
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('star-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let stars = [];
+    let w, h;
+
+    function initStars() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+
+      stars = [];
+      for (let i = 0; i < 120; i++) {
+        stars.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 1.5,
+          alpha: Math.random(),
+          dAlpha: 0.005 + Math.random() * 0.01
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, w, h);
+      for (const star of stars) {
+        star.alpha += star.dAlpha;
+        if (star.alpha <= 0 || star.alpha >= 1) star.dAlpha *= -1;
+
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+        ctx.fill();
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener('resize', initStars);
+    initStars();
+    animateStars();
+  </script>
+</body>
+</html>
