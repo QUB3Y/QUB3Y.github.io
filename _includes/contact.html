@@ -1,5 +1,5 @@
 <div class="contact-links">
     {% for item in site.data.contact %}
-        <button class="button" onclick="window.location.href='{{ item.link }}'">{{ item.name }}</button>
+        <a class="button" onclick="window.location.href='{{ item.link }}'">{{ item.name }}</a>
     {% endfor %}
 </div>

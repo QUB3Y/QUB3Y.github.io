@@ -5,7 +5,7 @@
 - name: Telegram
   link: https://t.me/Qubeyy
 - name: BlueSky
-  link: https://bsky.app/profile/qubey.bsky.social
+  link: https://bsky.app/profile/qubey.ca
 - name: Discord
   link: https://discordapp.com/users/289325633027178499
 - name: Signal MSG
@@ -14,3 +14,5 @@
   link: https://steamcommunity.com/id/Qubey_/
 - name: Music I Listen To (Last.fm)
   link: https://www.last.fm/user/Qubey
+- name: Matrix
+  link: https://matrix.to/#/@qubey:matrix.org
